@@ -124,6 +124,61 @@ object Form3: TForm3
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idwalkel'
+        Width = 42
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nip'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jk'
+        Width = 15
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'pendidikan'
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'telp'
+        Width = 82
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'matpel'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'alamat'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'status'
+        Width = 40
+        Visible = True
+      end>
   end
   object btn1: TButton
     Left = 24
