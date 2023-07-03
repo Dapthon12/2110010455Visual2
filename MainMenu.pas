@@ -22,6 +22,8 @@ type
     CETAK1: TMenuItem;
     USER1: TMenuItem;
     DataUser1: TMenuItem;
+    CetakPrestasi1: TMenuItem;
+    CetakPelanggaran1: TMenuItem;
     procedure DataSiswa1Click(Sender: TObject);
     procedure DataGuru1Click(Sender: TObject);
     procedure KeluarClick(Sender: TObject);
@@ -31,6 +33,8 @@ type
     procedure DataPoin1Click(Sender: TObject);
     procedure DataUser1Click(Sender: TObject);
     procedure DataSemester1Click(Sender: TObject);
+    procedure CetakPrestasi1Click(Sender: TObject);
+    procedure CetakPelanggaran1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +47,8 @@ var
 implementation
 
 uses DataSiswa, DataWaliKelas, DataOrangTua, DataHubungan, DataKelas,
-  DataPoin, DataUser, DataSemester;
+  DataPoin, DataUser, DataSemester, FormCetakPrestasi,
+  FormCetakPelanggaran;
 
 {$R *.dfm}
 
@@ -90,6 +95,16 @@ end;
 procedure TForm1.DataSemester1Click(Sender: TObject);
 begin
 Form9.ShowModal;
+end;
+
+procedure TForm1.CetakPrestasi1Click(Sender: TObject);
+begin
+Form10.ShowModal;
+end;
+
+procedure TForm1.CetakPelanggaran1Click(Sender: TObject);
+begin
+Form11.ShowModal;
 end;
 
 end.

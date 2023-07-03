@@ -10,7 +10,9 @@ uses
   DataKelas in 'DataKelas.pas' {Form6},
   DataPoin in 'DataPoin.pas' {Form7},
   DataUser in 'DataUser.pas' {Form8},
-  DataSemester in 'DataSemester.pas' {Form9};
+  DataSemester in 'DataSemester.pas' {Form9},
+  FormCetakPrestasi in 'FormCetakPrestasi.pas' {Form10},
+  FormCetakPelanggaran in 'FormCetakPelanggaran.pas' {Form11};
 
 {$R *.res}
 
@@ -25,5 +27,7 @@ begin
   Application.CreateForm(TForm7, Form7);
   Application.CreateForm(TForm8, Form8);
   Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm11, Form11);
   Application.Run;
 end.

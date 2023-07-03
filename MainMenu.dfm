@@ -16,8 +16,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object MainMenu1: TMainMenu
-    Left = 48
-    Top = 32
+    Left = 24
+    Top = 24
     object Data1: TMenuItem
       Caption = 'DATA SEKOLAH'
       object DataSiswa1: TMenuItem
@@ -55,6 +55,14 @@ object Form1: TForm1
     end
     object CETAK1: TMenuItem
       Caption = 'CETAK'
+      object CetakPrestasi1: TMenuItem
+        Caption = 'Cetak Prestasi'
+        OnClick = CetakPrestasi1Click
+      end
+      object CetakPelanggaran1: TMenuItem
+        Caption = 'Cetak Pelanggaran'
+        OnClick = CetakPelanggaran1Click
+      end
     end
     object USER1: TMenuItem
       Caption = 'USER'
@@ -75,7 +83,7 @@ object Form1: TForm1
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'D:\Visual 2\DaudAlPathoni_2110010455_TugasAkhir\libmysql.dll'
-    Left = 120
-    Top = 32
+    Left = 96
+    Top = 24
   end
 end
