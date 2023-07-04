@@ -4,7 +4,7 @@ object Form6: TForm6
   Width = 583
   Height = 332
   Caption = 'Data Kelas'
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

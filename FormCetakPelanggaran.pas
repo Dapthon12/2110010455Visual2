@@ -29,11 +29,15 @@ type
     frxDBpelanggaran: TfrxDBDataset;
     frxPelanggaran: TfrxReport;
     btn1: TButton;
+    btn2: TButton;
+    btn3: TButton;
     procedure dbgrd1CellClick(Column: TColumn);
     procedure bersih;
     procedure posisiawal;
     procedure FormShow(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,7 +49,7 @@ var
 
 implementation
 
-uses MainMenu;
+uses MainMenu, DataSemester;
 
 {$R *.dfm}
 
@@ -93,6 +97,26 @@ end;
 procedure TForm11.btn1Click(Sender: TObject);
 begin
 frxPelanggaran.ShowReport();
+end;
+
+procedure TForm11.btn2Click(Sender: TObject);
+begin
+Form9.ShowModal;
+Close;
+end;
+
+procedure TForm11.btn3Click(Sender: TObject);
+begin
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('SELECT semester.idsemester, semester.idsiswa, semester.idpoin, semester.idwalkel, semester.idortu, semester.idkelas, ' +
+                'siswa.nama_siswa, siswa.nis, kelas.nama, siswa.jk, wali_kelas.nama, ortu.nama, ortu.telp, poin.nama_poin, poin.jenis, poin.bobot, semester.status ' +
+                'FROM semester ' +
+                'LEFT JOIN siswa ON semester.idsiswa = siswa.idsiswa ' +
+                'LEFT JOIN poin ON semester.idpoin = poin.idpoin ' +
+                'LEFT JOIN wali_kelas ON semester.idwalkel = wali_kelas.idwalkel ' +
+                'LEFT JOIN ortu ON semester.idortu = ortu.idortu ' +
+                'LEFT JOIN kelas ON semester.idkelas = kelas.idkelas');
+ZQuery1.Open;
 end;
 
 end.

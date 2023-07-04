@@ -12,7 +12,9 @@ uses
   DataUser in 'DataUser.pas' {Form8},
   DataSemester in 'DataSemester.pas' {Form9},
   FormCetakPrestasi in 'FormCetakPrestasi.pas' {Form10},
-  FormCetakPelanggaran in 'FormCetakPelanggaran.pas' {Form11};
+  FormCetakPelanggaran in 'FormCetakPelanggaran.pas' {Form11},
+  FormCetakRangkuman in 'FormCetakRangkuman.pas' {Form12},
+  DataRangkuman in 'DataRangkuman.pas' {Form13};
 
 {$R *.res}
 
@@ -29,5 +31,7 @@ begin
   Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm10, Form10);
   Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TForm12, Form12);
+  Application.CreateForm(TForm13, Form13);
   Application.Run;
 end.

@@ -1,10 +1,10 @@
 object Form5: TForm5
-  Left = 192
-  Top = 125
+  Left = 593
+  Top = 172
   Width = 583
   Height = 404
   Caption = 'Data Hubungan'
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

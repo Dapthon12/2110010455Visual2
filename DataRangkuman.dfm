@@ -1,9 +1,9 @@
-object Form9: TForm9
-  Left = 283
-  Top = 134
-  Width = 581
-  Height = 503
-  Caption = 'Data Semester'
+object Form13: TForm13
+  Left = 387
+  Top = 197
+  Width = 583
+  Height = 365
+  Caption = 'Data Rangkuman'
   Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,108 +15,58 @@ object Form9: TForm9
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 24
-    Top = 8
-    Width = 63
-    Height = 13
-    Caption = 'Nama Siswa*'
-  end
   object Label2: TLabel
-    Left = 24
-    Top = 32
-    Width = 56
+    Left = 16
+    Top = 16
+    Width = 59
     Height = 13
-    Caption = 'Nama Poin*'
-  end
-  object Label8: TLabel
-    Left = 24
-    Top = 80
-    Width = 57
-    Height = 13
-    Caption = 'Orang Tua*'
-  end
-  object Label9: TLabel
-    Left = 24
-    Top = 128
-    Width = 38
-    Height = 13
-    Caption = 'Tanggal'
-  end
-  object Label10: TLabel
-    Left = 24
-    Top = 151
-    Width = 45
-    Height = 13
-    Caption = 'Semester'
-  end
-  object Label11: TLabel
-    Left = 24
-    Top = 175
-    Width = 31
-    Height = 13
-    Caption = 'Status'
+    Caption = 'ID Semester'
   end
   object Label3: TLabel
-    Left = 24
-    Top = 200
-    Width = 63
+    Left = 16
+    Top = 40
+    Width = 75
     Height = 13
-    Caption = 'Tingkat Kelas'
+    Caption = 'ID Poin Prestasi'
   end
   object Label4: TLabel
-    Left = 24
-    Top = 56
-    Width = 54
+    Left = 16
+    Top = 64
+    Width = 97
     Height = 13
-    Caption = 'Wali Kelas*'
-  end
-  object Label5: TLabel
-    Left = 24
-    Top = 104
-    Width = 31
-    Height = 13
-    Caption = 'Kelas*'
+    Caption = 'ID Poin Pelanggaran'
   end
   object edt1: TEdit
-    Left = 104
-    Top = 8
-    Width = 433
+    Left = 160
+    Top = 16
+    Width = 377
     Height = 21
     TabOrder = 0
     Text = 'edt1'
   end
   object edt2: TEdit
-    Left = 104
-    Top = 32
-    Width = 433
+    Left = 160
+    Top = 40
+    Width = 377
     Height = 21
     TabOrder = 1
     Text = 'edt2'
   end
-  object edt4: TEdit
-    Left = 104
-    Top = 80
-    Width = 433
+  object edt3: TEdit
+    Left = 160
+    Top = 64
+    Width = 377
     Height = 21
-    TabOrder = 3
-    Text = 'edt4'
-  end
-  object edt6: TEdit
-    Left = 104
-    Top = 152
-    Width = 433
-    Height = 21
-    TabOrder = 6
-    Text = 'edt6'
+    TabOrder = 2
+    Text = 'edt3'
   end
   object dbgrd1: TDBGrid
     Left = 16
-    Top = 274
+    Top = 138
     Width = 537
     Height = 177
     DataSource = DataSource1
-    TabOrder = 15
+    TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -126,20 +76,17 @@ object Form9: TForm9
     Columns = <
       item
         Expanded = False
-        FieldName = 'idsemester'
-        Title.Alignment = taCenter
-        Title.Caption = 'id'
-        Width = 20
+        FieldName = 'idrangkuman'
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'idsiswa'
+        FieldName = 'idsemester'
         Visible = False
       end
       item
         Expanded = False
-        FieldName = 'idpoin'
+        FieldName = 'idsiswa'
         Visible = False
       end
       item
@@ -159,48 +106,90 @@ object Form9: TForm9
       end
       item
         Expanded = False
+        FieldName = 'idprestasi'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'idpelanggaran'
+        Visible = False
+      end
+      item
+        Expanded = False
         FieldName = 'nama_siswa'
         Title.Caption = 'nama siswa'
-        Width = 90
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'nama_poin'
-        Title.Caption = 'nama poin'
-        Width = 500
+        FieldName = 'nis'
+        Width = 80
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nama'
-        Title.Caption = 'wali kelas'
-        Width = 100
+        Title.Caption = 'nama kelas'
+        Width = 65
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'jk'
+        Title.Alignment = taCenter
+        Width = 15
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nama_1'
-        Title.Caption = 'orang tua'
-        Width = 100
+        Title.Caption = 'nama wali kelas'
+        Width = 110
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nama_2'
-        Title.Caption = 'kelas'
-        Width = 60
+        Title.Caption = 'nama orang tua/wali'
+        Width = 110
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'tanggal'
+        FieldName = 'telp'
+        Title.Caption = 'no. hp orang tua/wali'
+        Width = 110
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'semester'
-        Width = 50
+        FieldName = 'nama_prestasi'
+        Title.Caption = 'nama prestasi'
+        Width = 160
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama_pelanggaran'
+        Title.Caption = 'nama pelanggaran'
+        Width = 500
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'bobot_prestasi'
+        Title.Caption = 'bobot prestasi'
+        Width = 75
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'bobot_pelanggaran'
+        Width = 100
         Visible = True
       end
       item
@@ -208,133 +197,97 @@ object Form9: TForm9
         FieldName = 'status'
         Width = 40
         Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'tingkat_kelas'
-        Title.Caption = 'tingkat kelas'
-        Width = 70
-        Visible = True
       end>
   end
   object btn1: TButton
     Left = 24
-    Top = 232
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'BARU'
-    TabOrder = 9
+    TabOrder = 4
     OnClick = btn1Click
   end
   object btn2: TButton
     Left = 112
-    Top = 232
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'SIMPAN'
-    TabOrder = 10
+    TabOrder = 5
     OnClick = btn2Click
   end
   object btn3: TButton
     Left = 200
-    Top = 232
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'EDIT'
-    TabOrder = 11
+    TabOrder = 6
     OnClick = btn3Click
   end
   object btn4: TButton
     Left = 288
-    Top = 232
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'HAPUS'
-    TabOrder = 12
+    TabOrder = 7
     OnClick = btn4Click
   end
   object btn5: TButton
     Left = 376
-    Top = 232
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'BATAL'
-    TabOrder = 13
-    OnClick = btn5Click
-  end
-  object edt7: TEdit
-    Left = 104
-    Top = 176
-    Width = 433
-    Height = 21
-    TabOrder = 7
-    Text = 'edt7'
-  end
-  object edt8: TEdit
-    Left = 104
-    Top = 200
-    Width = 433
-    Height = 21
     TabOrder = 8
-    Text = 'edt8'
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 464
-    Top = 232
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'KEMBALI'
-    TabOrder = 14
+    TabOrder = 9
     OnClick = btn6Click
-  end
-  object edt3: TEdit
-    Left = 104
-    Top = 56
-    Width = 433
-    Height = 21
-    TabOrder = 2
-    Text = 'edt3'
-  end
-  object edt5: TEdit
-    Left = 104
-    Top = 104
-    Width = 433
-    Height = 21
-    TabOrder = 4
-    Text = 'edt5'
-  end
-  object dtp1: TDateTimePicker
-    Left = 104
-    Top = 128
-    Width = 186
-    Height = 21
-    Date = 45104.352896250000000000
-    Time = 45104.352896250000000000
-    TabOrder = 5
   end
   object ZQuery1: TZQuery
     Connection = Form1.ZConnection1
     Active = True
     SQL.Strings = (
       
-        'SELECT semester.idsemester, semester.idsiswa, semester.idpoin, s' +
-        'emester.idwalkel, semester.idortu, semester.idkelas, siswa.nama_' +
-        'siswa, poin.nama_poin, wali_kelas.nama, ortu.nama, kelas.nama, s' +
-        'emester.tanggal, semester.semester, semester.status, semester.ti' +
-        'ngkat_kelas'
-      'FROM semester'
+        'SELECT rangkuman.idrangkuman, semester.idsemester, semester.idsi' +
+        'swa, semester.idwalkel, semester.idortu, semester.idkelas, rangk' +
+        'uman.idprestasi, rangkuman.idpelanggaran, siswa.nama_siswa, sisw' +
+        'a.nis, kelas.nama, siswa.jk, wali_kelas.nama, ortu.nama, ortu.te' +
+        'lp,  prestasi_poin.nama_poin AS nama_prestasi, '
+      
+        '       pelanggaran_poin.nama_poin AS nama_pelanggaran, prestasi_' +
+        'poin.bobot AS bobot_prestasi, '
+      
+        '       pelanggaran_poin.bobot AS bobot_pelanggaran, semester.sta' +
+        'tus'
+      'FROM rangkuman'
+      'LEFT JOIN semester ON rangkuman.idsemester = semester.idsemester'
       'LEFT JOIN siswa ON semester.idsiswa = siswa.idsiswa'
-      'LEFT JOIN poin ON semester.idpoin = poin.idpoin'
+      
+        'LEFT JOIN poin AS prestasi_poin ON rangkuman.idprestasi = presta' +
+        'si_poin.idpoin'
+      
+        'LEFT JOIN poin AS pelanggaran_poin ON rangkuman.idpelanggaran = ' +
+        'pelanggaran_poin.idpoin'
       'LEFT JOIN wali_kelas ON semester.idwalkel = wali_kelas.idwalkel'
       'LEFT JOIN ortu ON semester.idortu = ortu.idortu'
       'LEFT JOIN kelas ON semester.idkelas = kelas.idkelas')
     Params = <>
     Left = 40
-    Top = 312
+    Top = 176
   end
   object DataSource1: TDataSource
     DataSet = ZQuery1
     Left = 40
-    Top = 360
+    Top = 224
   end
 end

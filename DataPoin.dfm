@@ -4,7 +4,7 @@ object Form7: TForm7
   Width = 582
   Height = 381
   Caption = 'Data Poin'
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

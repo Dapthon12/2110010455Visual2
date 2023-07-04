@@ -4,7 +4,7 @@ object Form4: TForm4
   Width = 583
   Height = 493
   Caption = 'Data Orang Tua'
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

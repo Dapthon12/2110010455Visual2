@@ -1,10 +1,10 @@
 object Form10: TForm10
-  Left = 387
-  Top = 133
+  Left = 350
+  Top = 140
   Width = 574
   Height = 463
   Caption = 'Form Laporan Prestasi Siswa'
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -233,7 +233,8 @@ object Form10: TForm10
       item
         Expanded = False
         FieldName = 'jenis'
-        Visible = False
+        Width = 65
+        Visible = True
       end
       item
         Expanded = False
@@ -247,6 +248,24 @@ object Form10: TForm10
         Width = 45
         Visible = True
       end>
+  end
+  object btn2: TButton
+    Left = 464
+    Top = 96
+    Width = 75
+    Height = 33
+    Caption = 'TAMBAH'
+    TabOrder = 9
+    OnClick = btn2Click
+  end
+  object btn3: TButton
+    Left = 464
+    Top = 144
+    Width = 75
+    Height = 33
+    Caption = 'REFRESH'
+    TabOrder = 10
+    OnClick = btn3Click
   end
   object ZQuery1: TZQuery
     Connection = Form1.ZConnection1
@@ -265,21 +284,21 @@ object Form10: TForm10
       'LEFT JOIN ortu ON semester.idortu = ortu.idortu'
       'LEFT JOIN kelas ON semester.idkelas = kelas.idkelas')
     Params = <>
-    Left = 464
-    Top = 8
+    Left = 32
+    Top = 264
   end
   object DataSource1: TDataSource
     DataSet = ZQuery1
-    Left = 512
-    Top = 8
+    Left = 32
+    Top = 320
   end
   object frxDBprestasi: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = ZQuery1
     BCDToCurrency = False
-    Left = 488
-    Top = 64
+    Left = 96
+    Top = 264
   end
   object frxPrestasi: TfrxReport
     Version = '4.12.6'
@@ -296,8 +315,8 @@ object Form10: TForm10
       'begin'
       ''
       'end.')
-    Left = 488
-    Top = 112
+    Left = 96
+    Top = 320
     Datasets = <
       item
         DataSet = frxDBprestasi

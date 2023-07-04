@@ -4,7 +4,7 @@ object Form8: TForm8
   Width = 584
   Height = 381
   Caption = 'Data User'
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

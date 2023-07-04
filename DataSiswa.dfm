@@ -4,7 +4,7 @@ object Form2: TForm2
   Width = 582
   Height = 549
   Caption = 'Data Siswa'
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
