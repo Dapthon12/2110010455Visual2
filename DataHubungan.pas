@@ -154,11 +154,9 @@ if (edt1.Text='')or(edt2.Text='')or(edt3.Text='')or(edt4.Text='')or(edt5.Text=''
 begin
   ShowMessage('Inputan Wajib Diisi!');
 end else
-if  (edt1.Text = ZQuery1.FieldByName('nama_siswa').AsString) and
-    (edt2.Text = ZQuery1.FieldByName('nama').AsString) and
-    (edt3.Text = ZQuery1.FieldByName('status_hub_anak').AsString) and
-    (edt4.Text = ZQuery1.FieldByName('keterangan').AsString) and
-    (edt5.Text = ZQuery1.FieldByName('status_ortu').AsString) then
+if  (edt1.Text= ZQuery1.Fields[3].AsString) and (edt2.Text= ZQuery1.Fields[4].AsString)
+and (edt3.Text= ZQuery1.Fields[5].AsString)and (edt4.Text= ZQuery1.Fields[6].AsString)
+and (edt5.Text= ZQuery1.Fields[7].AsString) then
 begin
   ShowMessage('Data Tidak Ada Perubahan!');
   posisiawal;

@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `hubungan` (
   KEY `FK__ortu` (`idortu`) USING BTREE,
   CONSTRAINT `FK__ortu` FOREIGN KEY (`idortu`) REFERENCES `ortu` (`idortu`),
   CONSTRAINT `FK__siswa` FOREIGN KEY (`idsiswa`) REFERENCES `siswa` (`idsiswa`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.hubungan: ~5 rows (approximately)
 REPLACE INTO `hubungan` (`idhub`, `idsiswa`, `idortu`, `status_hub_anak`, `keterangan`, `status_ortu`) VALUES
@@ -40,7 +40,7 @@ REPLACE INTO `hubungan` (`idhub`, `idsiswa`, `idortu`, `status_hub_anak`, `keter
 	(2, 2, 2, 'Kandung', 'Ayah', 'Hidup'),
 	(3, 3, 3, 'Kandung', 'Ibu', 'Hidup'),
 	(6, 6, 6, 'Bukan', 'Paman', 'Hidup'),
-	(10, 7, 7, 'Kandung', 'Ayah', 'Hidup');
+	(7, 7, 7, 'Kandung', 'Ayah', 'Hidup');
 
 -- Dumping structure for table dblaporansiswa.kelas
 CREATE TABLE IF NOT EXISTS `kelas` (
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `kelas` (
   `nama` varchar(60) DEFAULT NULL,
   `jurusan` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`idkelas`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.kelas: ~4 rows (approximately)
 REPLACE INTO `kelas` (`idkelas`, `nama`, `jurusan`) VALUES
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `ortu` (
   `agama` char(10) DEFAULT NULL,
   `is_active` char(8) DEFAULT NULL,
   PRIMARY KEY (`idortu`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.ortu: ~5 rows (approximately)
 REPLACE INTO `ortu` (`idortu`, `nik`, `nama`, `pendidikan`, `pekerjaan`, `telp`, `alamat`, `jk`, `agama`, `is_active`) VALUES
@@ -88,9 +88,9 @@ CREATE TABLE IF NOT EXISTS `poin` (
   `jenis` varchar(50) DEFAULT NULL,
   `status` char(10) DEFAULT NULL,
   PRIMARY KEY (`idpoin`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.poin: ~57 rows (approximately)
+-- Dumping data for table dblaporansiswa.poin: ~55 rows (approximately)
 REPLACE INTO `poin` (`idpoin`, `nama_poin`, `bobot`, `jenis`, `status`) VALUES
 	(1, 'Siswa Teladan', '35', 'Prestasi', 'True'),
 	(2, 'Juara Kelas Peringkat 1', '20', 'Prestasi', 'True'),
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `rangkuman` (
   CONSTRAINT `FK_rangkuman_semester` FOREIGN KEY (`idsemester`) REFERENCES `semester` (`idsemester`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.rangkuman: ~1 rows (approximately)
+-- Dumping data for table dblaporansiswa.rangkuman: ~0 rows (approximately)
 REPLACE INTO `rangkuman` (`idrangkuman`, `idsemester`, `idprestasi`, `idpelanggaran`) VALUES
 	(1, 2, 2, 15);
 
@@ -194,7 +194,7 @@ CREATE TABLE IF NOT EXISTS `semester` (
   CONSTRAINT `FK_semester_wali_kelas` FOREIGN KEY (`idwalkel`) REFERENCES `wali_kelas` (`idwalkel`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.semester: ~5 rows (approximately)
+-- Dumping data for table dblaporansiswa.semester: ~4 rows (approximately)
 REPLACE INTO `semester` (`idsemester`, `idsiswa`, `idpoin`, `idwalkel`, `idortu`, `idkelas`, `tanggal`, `semester`, `status`, `tingkat_kelas`) VALUES
 	(1, 1, 1, 1, 1, 1, '2023-06-25', '1', 'Aktif', '10'),
 	(2, 2, 2, 1, 2, 1, '2023-06-27', '1', 'Aktif', '10'),
@@ -217,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `siswa` (
   `hp` char(20) DEFAULT NULL,
   `status` char(10) DEFAULT NULL,
   PRIMARY KEY (`idsiswa`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.siswa: ~5 rows (approximately)
 REPLACE INTO `siswa` (`idsiswa`, `nis`, `nisn`, `nama_siswa`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jk`, `alamat`, `telp`, `hp`, `status`) VALUES
@@ -253,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `wali_kelas` (
   `alamat` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `status` char(10) DEFAULT NULL,
   PRIMARY KEY (`idwalkel`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.wali_kelas: ~2 rows (approximately)
 REPLACE INTO `wali_kelas` (`idwalkel`, `nip`, `nama`, `jk`, `pendidikan`, `telp`, `matpel`, `alamat`, `status`) VALUES

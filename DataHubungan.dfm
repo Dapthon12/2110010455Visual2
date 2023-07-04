@@ -26,9 +26,9 @@ object Form5: TForm5
   object Label2: TLabel
     Left = 16
     Top = 32
-    Width = 36
+    Width = 42
     Height = 13
-    Caption = 'ID Ortu'
+    Caption = 'ID Ortu*'
   end
   object Label8: TLabel
     Left = 16
