@@ -104,11 +104,6 @@ if edt2.Text = '' then begin
   ShowMessage('ID Poin Prestasi Tidak Boleh Kosong!'); end else
 if edt3.Text = '' then begin
   ShowMessage('ID Poin Pelanggaran Tidak Boleh Kosong!'); end else
-if ZQuery1.Locate('idsiswa',edt1.Text,[]) then
-begin
-  ShowMessage('Data Sudah Ada Di Sistem!');
-  edt1.SetFocus;
-end else
 begin
 ZQuery1.SQL.Clear;
 ZQuery1.SQL.Add('insert into rangkuman values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'")');
