@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 500
-  Top = 79
+  Left = 384
+  Top = 196
   Width = 583
   Height = 333
   Caption = 'Data Kelas'

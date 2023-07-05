@@ -1,6 +1,6 @@
 object Form11: TForm11
-  Left = 353
-  Top = 133
+  Left = 374
+  Top = 156
   Width = 574
   Height = 461
   Caption = 'Form Laporan Pelanggaran Siswa'
@@ -138,13 +138,13 @@ object Form11: TForm11
       item
         Expanded = False
         FieldName = 'idsemester'
-        Visible = False
+        Visible = True
       end
       item
         Expanded = False
         FieldName = 'idsiswa'
-        Width = 40
-        Visible = True
+        Width = -1
+        Visible = False
       end
       item
         Expanded = False
@@ -242,7 +242,7 @@ object Form11: TForm11
   end
   object btn1: TButton
     Left = 464
-    Top = 192
+    Top = 144
     Width = 75
     Height = 33
     Caption = 'CETAK'
@@ -251,7 +251,7 @@ object Form11: TForm11
   end
   object btn2: TButton
     Left = 464
-    Top = 96
+    Top = 48
     Width = 75
     Height = 33
     Caption = 'TAMBAH'
@@ -260,12 +260,21 @@ object Form11: TForm11
   end
   object btn3: TButton
     Left = 464
-    Top = 144
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'REFRESH'
     TabOrder = 10
     OnClick = btn3Click
+  end
+  object btn4: TButton
+    Left = 464
+    Top = 192
+    Width = 75
+    Height = 33
+    Caption = 'KELUAR'
+    TabOrder = 11
+    OnClick = btn4Click
   end
   object ZQuery1: TZQuery
     Connection = Form1.ZConnection1
@@ -284,8 +293,8 @@ object Form11: TForm11
       'LEFT JOIN ortu ON semester.idortu = ortu.idortu'
       'LEFT JOIN kelas ON semester.idkelas = kelas.idkelas')
     Params = <>
-    Left = 24
-    Top = 280
+    Left = 48
+    Top = 256
   end
   object DataSource1: TDataSource
     DataSet = ZQuery1

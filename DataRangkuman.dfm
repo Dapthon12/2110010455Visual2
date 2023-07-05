@@ -18,23 +18,23 @@ object Form13: TForm13
   object Label2: TLabel
     Left = 16
     Top = 16
-    Width = 59
+    Width = 65
     Height = 13
-    Caption = 'ID Semester'
+    Caption = 'ID Semester*'
   end
   object Label3: TLabel
     Left = 16
     Top = 40
-    Width = 75
+    Width = 81
     Height = 13
-    Caption = 'ID Poin Prestasi'
+    Caption = 'ID Poin Prestasi*'
   end
   object Label4: TLabel
     Left = 16
     Top = 64
-    Width = 97
+    Width = 103
     Height = 13
-    Caption = 'ID Poin Pelanggaran'
+    Caption = 'ID Poin Pelanggaran*'
   end
   object edt1: TEdit
     Left = 160

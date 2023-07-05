@@ -1,6 +1,6 @@
 object Form7: TForm7
-  Left = 449
-  Top = 118
+  Left = 357
+  Top = 157
   Width = 582
   Height = 381
   Caption = 'Data Poin'

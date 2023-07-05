@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `hubungan` (
   KEY `FK__ortu` (`idortu`) USING BTREE,
   CONSTRAINT `FK__ortu` FOREIGN KEY (`idortu`) REFERENCES `ortu` (`idortu`),
   CONSTRAINT `FK__siswa` FOREIGN KEY (`idsiswa`) REFERENCES `siswa` (`idsiswa`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.hubungan: ~5 rows (approximately)
 REPLACE INTO `hubungan` (`idhub`, `idsiswa`, `idortu`, `status_hub_anak`, `keterangan`, `status_ortu`) VALUES
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `kelas` (
   `nama` varchar(60) DEFAULT NULL,
   `jurusan` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`idkelas`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.kelas: ~4 rows (approximately)
 REPLACE INTO `kelas` (`idkelas`, `nama`, `jurusan`) VALUES
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `ortu` (
   `agama` char(10) DEFAULT NULL,
   `is_active` char(8) DEFAULT NULL,
   PRIMARY KEY (`idortu`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.ortu: ~5 rows (approximately)
 REPLACE INTO `ortu` (`idortu`, `nik`, `nama`, `pendidikan`, `pekerjaan`, `telp`, `alamat`, `jk`, `agama`, `is_active`) VALUES
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `poin` (
   `jenis` varchar(50) DEFAULT NULL,
   `status` char(10) DEFAULT NULL,
   PRIMARY KEY (`idpoin`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.poin: ~57 rows (approximately)
 REPLACE INTO `poin` (`idpoin`, `nama_poin`, `bobot`, `jenis`, `status`) VALUES
@@ -163,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `rangkuman` (
   CONSTRAINT `FK_rangkuman_poin` FOREIGN KEY (`idprestasi`) REFERENCES `poin` (`idpoin`),
   CONSTRAINT `FK_rangkuman_poin_2` FOREIGN KEY (`idpelanggaran`) REFERENCES `poin` (`idpoin`),
   CONSTRAINT `FK_rangkuman_semester` FOREIGN KEY (`idsemester`) REFERENCES `semester` (`idsemester`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.rangkuman: ~1 rows (approximately)
 REPLACE INTO `rangkuman` (`idrangkuman`, `idsemester`, `idprestasi`, `idpelanggaran`) VALUES
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `semester` (
   CONSTRAINT `FK_semester_poin` FOREIGN KEY (`idpoin`) REFERENCES `poin` (`idpoin`),
   CONSTRAINT `FK_semester_siswa` FOREIGN KEY (`idsiswa`) REFERENCES `siswa` (`idsiswa`),
   CONSTRAINT `FK_semester_wali_kelas` FOREIGN KEY (`idwalkel`) REFERENCES `wali_kelas` (`idwalkel`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.semester: ~5 rows (approximately)
 REPLACE INTO `semester` (`idsemester`, `idsiswa`, `idpoin`, `idwalkel`, `idortu`, `idkelas`, `tanggal`, `semester`, `status`, `tingkat_kelas`) VALUES
@@ -253,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `wali_kelas` (
   `alamat` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `status` char(10) DEFAULT NULL,
   PRIMARY KEY (`idwalkel`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.wali_kelas: ~2 rows (approximately)
 REPLACE INTO `wali_kelas` (`idwalkel`, `nip`, `nama`, `jk`, `pendidikan`, `telp`, `matpel`, `alamat`, `status`) VALUES

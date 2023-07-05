@@ -31,6 +31,7 @@ type
     frxPrestasi: TfrxReport;
     btn2: TButton;
     btn3: TButton;
+    btn4: TButton;
     procedure dbgrd1CellClick(Column: TColumn);
     procedure bersih;
     procedure posisiawal;
@@ -38,6 +39,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -117,6 +119,12 @@ ZQuery1.SQL.Add('SELECT semester.idsemester, semester.idsiswa, semester.idpoin, 
                 'LEFT JOIN ortu ON semester.idortu = ortu.idortu ' +
                 'LEFT JOIN kelas ON semester.idkelas = kelas.idkelas');
 ZQuery1.Open;
+end;
+
+procedure TForm10.btn4Click(Sender: TObject);
+begin
+Form1.Show;
+Close;
 end;
 
 end.

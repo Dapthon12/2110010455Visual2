@@ -1,8 +1,8 @@
 object Form12: TForm12
-  Left = 394
-  Top = 155
+  Left = 386
+  Top = 134
   Width = 597
-  Height = 459
+  Height = 470
   Caption = 'Form Rangkuman Laporan'
   Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
@@ -123,7 +123,7 @@ object Form12: TForm12
   end
   object dbgrd1: TDBGrid
     Left = 8
-    Top = 234
+    Top = 242
     Width = 561
     Height = 177
     DataSource = DataSource1
@@ -138,7 +138,7 @@ object Form12: TForm12
       item
         Expanded = False
         FieldName = 'idrangkuman'
-        Visible = False
+        Visible = True
       end
       item
         Expanded = False
@@ -148,8 +148,8 @@ object Form12: TForm12
       item
         Expanded = False
         FieldName = 'idsiswa'
-        Width = 40
-        Visible = True
+        Width = -1
+        Visible = False
       end
       item
         Expanded = False
@@ -264,7 +264,7 @@ object Form12: TForm12
   end
   object btn1: TButton
     Left = 464
-    Top = 192
+    Top = 152
     Width = 105
     Height = 33
     Caption = 'CETAK'
@@ -273,7 +273,7 @@ object Form12: TForm12
   end
   object btn2: TButton
     Left = 464
-    Top = 48
+    Top = 8
     Width = 105
     Height = 33
     Caption = 'DATA SEMESTER'
@@ -282,7 +282,7 @@ object Form12: TForm12
   end
   object btn3: TButton
     Left = 464
-    Top = 96
+    Top = 56
     Width = 105
     Height = 33
     Caption = 'DATA RANGKUMAN'
@@ -291,12 +291,21 @@ object Form12: TForm12
   end
   object btn4: TButton
     Left = 464
-    Top = 144
+    Top = 104
     Width = 105
     Height = 33
     Caption = 'REFRESH DATA'
     TabOrder = 11
     OnClick = btn4Click
+  end
+  object btn5: TButton
+    Left = 464
+    Top = 200
+    Width = 105
+    Height = 33
+    Caption = 'KELUAR'
+    TabOrder = 12
+    OnClick = btn5Click
   end
   object ZQuery1: TZQuery
     Connection = Form1.ZConnection1

@@ -173,7 +173,7 @@ object Form2: TForm2
       item
         Expanded = False
         FieldName = 'idsiswa'
-        Width = 20
+        Width = 39
         Visible = True
       end
       item
@@ -191,7 +191,8 @@ object Form2: TForm2
       item
         Expanded = False
         FieldName = 'nama_siswa'
-        Width = 90
+        Title.Caption = 'nama siswa'
+        Width = 100
         Visible = True
       end
       item
@@ -203,12 +204,14 @@ object Form2: TForm2
       item
         Expanded = False
         FieldName = 'tempat_lahir'
+        Title.Caption = 'tempat lahir'
         Width = 90
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tanggal_lahir'
+        Title.Caption = 'tanggal lahir'
         Width = 70
         Visible = True
       end
@@ -221,7 +224,7 @@ object Form2: TForm2
       item
         Expanded = False
         FieldName = 'alamat'
-        Width = 90
+        Width = 255
         Visible = True
       end
       item

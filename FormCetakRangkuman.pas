@@ -32,6 +32,7 @@ type
     btn4: TButton;
     frxDBrangkuman: TfrxDBDataset;
     frxrangkuman: TfrxReport;
+    btn5: TButton;
     procedure bersih;
     procedure dbgrd1CellClick(Column: TColumn);
     procedure posisiawal;
@@ -40,6 +41,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -131,6 +133,12 @@ end;
 procedure TForm12.btn1Click(Sender: TObject);
 begin
 frxrangkuman.ShowReport();
+end;
+
+procedure TForm12.btn5Click(Sender: TObject);
+begin
+Form1.Show;
+Close;
 end;
 
 end.

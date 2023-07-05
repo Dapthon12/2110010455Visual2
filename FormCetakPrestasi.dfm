@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 350
-  Top = 140
+  Left = 340
+  Top = 144
   Width = 574
   Height = 463
   Caption = 'Form Laporan Prestasi Siswa'
@@ -123,7 +123,7 @@ object Form10: TForm10
   end
   object btn1: TButton
     Left = 464
-    Top = 192
+    Top = 144
     Width = 75
     Height = 33
     Caption = 'CETAK'
@@ -147,13 +147,13 @@ object Form10: TForm10
       item
         Expanded = False
         FieldName = 'idsemester'
-        Visible = False
+        Visible = True
       end
       item
         Expanded = False
         FieldName = 'idsiswa'
-        Width = 40
-        Visible = True
+        Width = -1
+        Visible = False
       end
       item
         Expanded = False
@@ -251,7 +251,7 @@ object Form10: TForm10
   end
   object btn2: TButton
     Left = 464
-    Top = 96
+    Top = 48
     Width = 75
     Height = 33
     Caption = 'TAMBAH'
@@ -260,12 +260,21 @@ object Form10: TForm10
   end
   object btn3: TButton
     Left = 464
-    Top = 144
+    Top = 96
     Width = 75
     Height = 33
     Caption = 'REFRESH'
     TabOrder = 10
     OnClick = btn3Click
+  end
+  object btn4: TButton
+    Left = 464
+    Top = 192
+    Width = 75
+    Height = 33
+    Caption = 'KELUAR'
+    TabOrder = 11
+    OnClick = btn4Click
   end
   object ZQuery1: TZQuery
     Connection = Form1.ZConnection1
