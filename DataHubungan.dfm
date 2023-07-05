@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 593
-  Top = 172
+  Left = 409
+  Top = 149
   Width = 583
   Height = 404
   Caption = 'Data Hubungan'

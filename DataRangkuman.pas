@@ -139,8 +139,8 @@ if (edt1.Text='')or(edt2.Text='')or(edt3.Text='') then
 begin
   ShowMessage('Inputan Wajib Diisi!');
 end else
-if (edt1.Text= ZQuery1.Fields[6].AsString) and (edt2.Text= ZQuery1.Fields[7].AsString)
-and (edt3.Text= ZQuery1.Fields[8].AsString) then
+if (edt1.Text= ZQuery1.Fields[1].AsString) and (edt2.Text= ZQuery1.Fields[6].AsString)
+and (edt3.Text= ZQuery1.Fields[7].AsString) then
 begin
   ShowMessage('Data Tidak Ada Perubahan!');
   posisiawal;

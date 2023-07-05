@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `poin` (
   PRIMARY KEY (`idpoin`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.poin: ~55 rows (approximately)
+-- Dumping data for table dblaporansiswa.poin: ~57 rows (approximately)
 REPLACE INTO `poin` (`idpoin`, `nama_poin`, `bobot`, `jenis`, `status`) VALUES
 	(1, 'Siswa Teladan', '35', 'Prestasi', 'True'),
 	(2, 'Juara Kelas Peringkat 1', '20', 'Prestasi', 'True'),
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `rangkuman` (
   CONSTRAINT `FK_rangkuman_semester` FOREIGN KEY (`idsemester`) REFERENCES `semester` (`idsemester`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.rangkuman: ~0 rows (approximately)
+-- Dumping data for table dblaporansiswa.rangkuman: ~1 rows (approximately)
 REPLACE INTO `rangkuman` (`idrangkuman`, `idsemester`, `idprestasi`, `idpelanggaran`) VALUES
 	(1, 2, 2, 15);
 
@@ -194,7 +194,7 @@ CREATE TABLE IF NOT EXISTS `semester` (
   CONSTRAINT `FK_semester_wali_kelas` FOREIGN KEY (`idwalkel`) REFERENCES `wali_kelas` (`idwalkel`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.semester: ~4 rows (approximately)
+-- Dumping data for table dblaporansiswa.semester: ~5 rows (approximately)
 REPLACE INTO `semester` (`idsemester`, `idsiswa`, `idpoin`, `idwalkel`, `idortu`, `idkelas`, `tanggal`, `semester`, `status`, `tingkat_kelas`) VALUES
 	(1, 1, 1, 1, 1, 1, '2023-06-25', '1', 'Aktif', '10'),
 	(2, 2, 2, 1, 2, 1, '2023-06-27', '1', 'Aktif', '10'),

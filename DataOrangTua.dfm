@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 192
-  Top = 125
+  Left = 472
+  Top = 111
   Width = 583
   Height = 493
   Caption = 'Data Orang Tua'

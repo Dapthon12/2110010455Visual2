@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 426
-  Top = 146
+  Left = 468
+  Top = 123
   Width = 584
   Height = 478
   Caption = 'Data Wali Kelas'

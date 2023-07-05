@@ -183,8 +183,8 @@ begin
 end else
 if (edt1.Text= ZQuery1.Fields[1].AsString) and (edt2.Text= ZQuery1.Fields[2].AsString)
 and (edt3.Text= ZQuery1.Fields[3].AsString) and (edt4.Text= ZQuery1.Fields[4].AsString)
-and (edt5.Text= ZQuery1.Fields[5].AsString) and (cbb1.Text= ZQuery1.Fields[6].AsString)
-and (dtp1.Date= ZQuery1.Fields[7].AsDateTime) and (edt6.Text= ZQuery1.Fields[8].AsString)
+and (edt5.Text= ZQuery1.Fields[5].AsString) and (dtp1.Date= ZQuery1.Fields[6].AsDateTime)
+and (cbb1.Text= ZQuery1.Fields[7].AsString) and (edt6.Text= ZQuery1.Fields[8].AsString)
 and (edt7.Text= ZQuery1.Fields[9].AsString) and (edt8.Text= ZQuery1.Fields[10].AsString)
 and (edt9.Text= ZQuery1.Fields[11].AsString) then
 begin

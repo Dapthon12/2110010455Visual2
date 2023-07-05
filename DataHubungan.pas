@@ -154,7 +154,7 @@ if (edt1.Text='')or(edt2.Text='')or(edt3.Text='')or(edt4.Text='')or(edt5.Text=''
 begin
   ShowMessage('Inputan Wajib Diisi!');
 end else
-if  (edt1.Text= ZQuery1.Fields[3].AsString) and (edt2.Text= ZQuery1.Fields[4].AsString)
+if  (edt1.Text= ZQuery1.Fields[1].AsString) and (edt2.Text= ZQuery1.Fields[2].AsString)
 and (edt3.Text= ZQuery1.Fields[5].AsString)and (edt4.Text= ZQuery1.Fields[6].AsString)
 and (edt5.Text= ZQuery1.Fields[7].AsString) then
 begin
