@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `kelas` (
   `nama` varchar(60) DEFAULT NULL,
   `jurusan` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`idkelas`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.kelas: ~4 rows (approximately)
 REPLACE INTO `kelas` (`idkelas`, `nama`, `jurusan`) VALUES
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `poin` (
   PRIMARY KEY (`idpoin`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.poin: ~57 rows (approximately)
+-- Dumping data for table dblaporansiswa.poin: ~55 rows (approximately)
 REPLACE INTO `poin` (`idpoin`, `nama_poin`, `bobot`, `jenis`, `status`) VALUES
 	(1, 'Siswa Teladan', '35', 'Prestasi', 'True'),
 	(2, 'Juara Kelas Peringkat 1', '20', 'Prestasi', 'True'),
@@ -163,9 +163,9 @@ CREATE TABLE IF NOT EXISTS `rangkuman` (
   CONSTRAINT `FK_rangkuman_poin` FOREIGN KEY (`idprestasi`) REFERENCES `poin` (`idpoin`),
   CONSTRAINT `FK_rangkuman_poin_2` FOREIGN KEY (`idpelanggaran`) REFERENCES `poin` (`idpoin`),
   CONSTRAINT `FK_rangkuman_semester` FOREIGN KEY (`idsemester`) REFERENCES `semester` (`idsemester`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.rangkuman: ~1 rows (approximately)
+-- Dumping data for table dblaporansiswa.rangkuman: ~2 rows (approximately)
 REPLACE INTO `rangkuman` (`idrangkuman`, `idsemester`, `idprestasi`, `idpelanggaran`) VALUES
 	(1, 2, 2, 15);
 
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `semester` (
   CONSTRAINT `FK_semester_poin` FOREIGN KEY (`idpoin`) REFERENCES `poin` (`idpoin`),
   CONSTRAINT `FK_semester_siswa` FOREIGN KEY (`idsiswa`) REFERENCES `siswa` (`idsiswa`),
   CONSTRAINT `FK_semester_wali_kelas` FOREIGN KEY (`idwalkel`) REFERENCES `wali_kelas` (`idwalkel`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.semester: ~5 rows (approximately)
 REPLACE INTO `semester` (`idsemester`, `idsiswa`, `idpoin`, `idwalkel`, `idortu`, `idkelas`, `tanggal`, `semester`, `status`, `tingkat_kelas`) VALUES
@@ -217,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `siswa` (
   `hp` char(20) DEFAULT NULL,
   `status` char(10) DEFAULT NULL,
   PRIMARY KEY (`idsiswa`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.siswa: ~5 rows (approximately)
 REPLACE INTO `siswa` (`idsiswa`, `nis`, `nisn`, `nama_siswa`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jk`, `alamat`, `telp`, `hp`, `status`) VALUES
@@ -234,12 +234,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `level` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `status` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `created_userid` int DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `updated_userid` int DEFAULT NULL,
   PRIMARY KEY (`iduser`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.user: ~1 rows (approximately)
-REPLACE INTO `user` (`iduser`, `username`, `password`, `level`, `status`) VALUES
-	(1, 'daud', 'daudal', '1', 'Aktif');
+REPLACE INTO `user` (`iduser`, `username`, `password`, `level`, `status`, `created_at`, `created_userid`, `updated_at`, `updated_userid`) VALUES
+	(1, 'daud', 'daud', '1', 'Aktif', '2023-07-08 00:18:10', 1, '2023-07-08 00:58:23', 1),
+	(2, 'admin', 'admin', '1', 'Aktif', '2023-07-08 00:23:49', 2, '2023-07-08 00:23:53', 2);
 
 -- Dumping structure for table dblaporansiswa.wali_kelas
 CREATE TABLE IF NOT EXISTS `wali_kelas` (
@@ -253,7 +258,7 @@ CREATE TABLE IF NOT EXISTS `wali_kelas` (
   `alamat` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `status` char(10) DEFAULT NULL,
   PRIMARY KEY (`idwalkel`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table dblaporansiswa.wali_kelas: ~2 rows (approximately)
 REPLACE INTO `wali_kelas` (`idwalkel`, `nip`, `nama`, `jk`, `pendidikan`, `telp`, `matpel`, `alamat`, `status`) VALUES

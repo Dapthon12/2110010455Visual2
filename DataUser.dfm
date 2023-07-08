@@ -92,52 +92,54 @@ object Form8: TForm8
       item
         Expanded = False
         FieldName = 'iduser'
-        Width = 32
+        Width = 35
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'username'
-        Width = 80
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'password'
-        Width = 80
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'level'
-        Width = 50
+        Width = 32
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'status'
-        Width = 70
+        Width = 45
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'created_at'
-        Visible = False
+        Width = 110
+        Visible = True
       end
       item
         Expanded = False
         FieldName = 'created_userid'
-        Visible = False
+        Visible = True
       end
       item
         Expanded = False
         FieldName = 'updated_at'
-        Visible = False
+        Width = 110
+        Visible = True
       end
       item
         Expanded = False
         FieldName = 'updated_userid'
-        Visible = False
+        Visible = True
       end>
   end
   object btn1: TButton

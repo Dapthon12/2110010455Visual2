@@ -83,6 +83,7 @@ edt1.Enabled:= True;
 edt2.Enabled:= True;
 edt3.Enabled:= True;
 edt4.Enabled:= True;
+
 end;
 
 procedure TForm8.FormShow(Sender: TObject);
@@ -118,7 +119,8 @@ begin
 end else
 begin
 ZQuery1.SQL.Clear;
-ZQuery1.SQL.Add('insert into user values(null,"'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'")');
+ZQuery1.SQL.Add('INSERT INTO user (iduser, username, password, level, status, created_at, created_userid, updated_at, updated_userid) ' +
+      'VALUES (null,"' + edt1.Text + '", "' + edt2.Text + '", "' + edt3.Text + '", "' + edt4.Text + '", NOW(), iduser, NOW(), iduser)');
 ZQuery1.ExecSQL;
 
 ZQuery1.SQL.Clear;
@@ -144,7 +146,7 @@ end else
 begin
 ShowMessage('Data Berhasil Diupdate!');
 ZQuery1.SQL.Clear;
-ZQuery1.SQL.Add('Update user set username="'+edt1.Text+'",password="'+edt2.Text+'",level="'+edt3.Text+'",status="'+edt4.Text+'" where iduser="'+id+'"');
+ZQuery1.SQL.Add('Update user set username="'+edt1.Text+'",password="'+edt2.Text+'",level="'+edt3.Text+'",status="'+edt4.Text+'", updated_at = NOW(), updated_userid = iduser where iduser="'+id+'"');
 ZQuery1.ExecSQL;
 
 ZQuery1.SQL.Clear;
