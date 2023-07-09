@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids;
+  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids, frxClass,
+  frxDBSet;
 
 type
   TForm3 = class(TForm)
@@ -34,6 +35,9 @@ type
     Label3: TLabel;
     edt7: TEdit;
     btn6: TButton;
+    frxDBDataWaliKelas: TfrxDBDataset;
+    frxDataWaliKelas: TfrxReport;
+    btn7: TButton;
     procedure bersih;
     procedure posisiawal;
     procedure tulis;
@@ -45,6 +49,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure btn6Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,7 +62,7 @@ var
 
 implementation
 
-uses MainMenu;
+uses MainMenu, FormLogin;
 
 {$R *.dfm}
 
@@ -232,6 +237,11 @@ procedure TForm3.btn6Click(Sender: TObject);
 begin
 Form1.Show;
 Close;
+end;
+
+procedure TForm3.btn7Click(Sender: TObject);
+begin
+frxDataWaliKelas.ShowReport();
 end;
 
 end.

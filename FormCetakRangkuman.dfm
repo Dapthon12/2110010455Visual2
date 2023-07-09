@@ -148,7 +148,6 @@ object Form12: TForm12
       item
         Expanded = False
         FieldName = 'idsiswa'
-        Width = -1
         Visible = False
       end
       item
@@ -308,7 +307,7 @@ object Form12: TForm12
     OnClick = btn5Click
   end
   object ZQuery1: TZQuery
-    Connection = Form1.ZConnection1
+    Connection = Form14.ZConnection1
     Active = True
     SQL.Strings = (
       
@@ -361,7 +360,7 @@ object Form12: TForm12
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45105.847449016200000000
-    ReportOptions.LastChange = 45111.493112939820000000
+    ReportOptions.LastChange = 45116.490959421300000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -535,7 +534,7 @@ object Form12: TForm12
         object Memo10: TfrxMemoView
           Left = 37.795300000000000000
           Top = 238.110390000000000000
-          Width = 136.063080000000000000
+          Width = 139.842610000000000000
           Height = 18.897650000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET

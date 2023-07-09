@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `poin` (
   PRIMARY KEY (`idpoin`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.poin: ~55 rows (approximately)
+-- Dumping data for table dblaporansiswa.poin: ~57 rows (approximately)
 REPLACE INTO `poin` (`idpoin`, `nama_poin`, `bobot`, `jenis`, `status`) VALUES
 	(1, 'Siswa Teladan', '35', 'Prestasi', 'True'),
 	(2, 'Juara Kelas Peringkat 1', '20', 'Prestasi', 'True'),
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `rangkuman` (
   CONSTRAINT `FK_rangkuman_semester` FOREIGN KEY (`idsemester`) REFERENCES `semester` (`idsemester`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.rangkuman: ~2 rows (approximately)
+-- Dumping data for table dblaporansiswa.rangkuman: ~1 rows (approximately)
 REPLACE INTO `rangkuman` (`idrangkuman`, `idsemester`, `idprestasi`, `idpelanggaran`) VALUES
 	(1, 2, 2, 15);
 
@@ -225,7 +225,7 @@ REPLACE INTO `siswa` (`idsiswa`, `nis`, `nisn`, `nama_siswa`, `nik`, `tempat_lah
 	(2, '111', '1102', 'Salsa', '11022003', 'Banjarmasin', '2003-05-13', 'P', 'Sungai Miai', '089231', '081123132', 'Aktif'),
 	(3, '113', '1103', 'Reza', '11032003', 'Banjarmasin', '2003-06-10', 'L', 'Kayutangi', '081213', '0812318232', 'Aktif'),
 	(6, '116', '1106', 'Alfin', '11062003', 'Banjarmasin', '2003-03-15', 'L', 'Handil Bakti', '081238', '0812394298', 'Aktif'),
-	(7, '117', '1107', 'Hadi', '11072003', 'Banjarmasin', '2003-02-04', 'L', 'BJM', '08123131', '083223', 'Aktif');
+	(7, '117', '1107', 'Hadi', '11072003', 'Banjarmasin', '2003-02-04', 'L', 'BJM', '083223', '08123131', 'Aktif');
 
 -- Dumping structure for table dblaporansiswa.user
 CREATE TABLE IF NOT EXISTS `user` (
@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`iduser`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table dblaporansiswa.user: ~1 rows (approximately)
+-- Dumping data for table dblaporansiswa.user: ~2 rows (approximately)
 REPLACE INTO `user` (`iduser`, `username`, `password`, `level`, `status`, `created_at`, `created_userid`, `updated_at`, `updated_userid`) VALUES
 	(1, 'daud', 'daud', '1', 'Aktif', '2023-07-08 00:18:10', 1, '2023-07-08 00:58:23', 1),
 	(2, 'admin', 'admin', '1', 'Aktif', '2023-07-08 00:23:49', 2, '2023-07-08 00:23:53', 2);
@@ -262,8 +262,8 @@ CREATE TABLE IF NOT EXISTS `wali_kelas` (
 
 -- Dumping data for table dblaporansiswa.wali_kelas: ~2 rows (approximately)
 REPLACE INTO `wali_kelas` (`idwalkel`, `nip`, `nama`, `jk`, `pendidikan`, `telp`, `matpel`, `alamat`, `status`) VALUES
-	(1, '11001', 'Ahmad', 'L', 'S1 Matematika', '08123282349', 'Matematika', 'Sungai Miai', 'Aktif'),
-	(2, '11002', 'Annisah', 'P', 'S1 Seni Budaya', '082931283', 'Seni Budaya', 'Sungai Miai', 'Aktif');
+	(1, '11001', 'Andi,S.Mat', 'L', 'S1 Matematika', '08123282349', 'Matematika', 'Sungai Miai', 'Aktif'),
+	(2, '11002', 'Annisah,S.Sn', 'P', 'S1 Seni', '082931283', 'Seni Budaya', 'Sungai Miai', 'Aktif');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

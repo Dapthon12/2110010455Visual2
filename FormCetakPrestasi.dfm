@@ -2,7 +2,7 @@ object Form10: TForm10
   Left = 340
   Top = 144
   Width = 574
-  Height = 463
+  Height = 475
   Caption = 'Form Laporan Prestasi Siswa'
   Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
@@ -63,6 +63,13 @@ object Form10: TForm10
     Width = 111
     Height = 13
     Caption = 'No. Hp Orang Tua/Wali'
+  end
+  object Label8: TLabel
+    Left = 8
+    Top = 416
+    Width = 161
+    Height = 13
+    Caption = '*Pilih poin yang  jenisnya prestasi'
   end
   object edt1: TEdit
     Left = 136
@@ -152,7 +159,6 @@ object Form10: TForm10
       item
         Expanded = False
         FieldName = 'idsiswa'
-        Width = -1
         Visible = False
       end
       item
@@ -277,7 +283,7 @@ object Form10: TForm10
     OnClick = btn4Click
   end
   object ZQuery1: TZQuery
-    Connection = Form1.ZConnection1
+    Connection = Form14.ZConnection1
     Active = True
     SQL.Strings = (
       
@@ -318,7 +324,7 @@ object Form10: TForm10
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45105.847449016200000000
-    ReportOptions.LastChange = 45105.904404525500000000
+    ReportOptions.LastChange = 45116.489615972200000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -492,7 +498,7 @@ object Form10: TForm10
         object Memo10: TfrxMemoView
           Left = 37.795300000000000000
           Top = 238.110390000000000000
-          Width = 136.063080000000000000
+          Width = 139.842610000000000000
           Height = 18.897650000000000000
           ShowHint = False
           Font.Charset = DEFAULT_CHARSET

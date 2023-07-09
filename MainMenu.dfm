@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 465
   Top = 140
   Width = 404
-  Height = 405
+  Height = 432
   Caption = 'Menu Utama'
   Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
@@ -30,7 +30,7 @@ object Form1: TForm1
   end
   object Label2: TLabel
     Left = 160
-    Top = 256
+    Top = 224
     Width = 76
     Height = 18
     Caption = 'Form Cetak'
@@ -43,7 +43,7 @@ object Form1: TForm1
   end
   object btn1: TButton
     Left = 16
-    Top = 80
+    Top = 56
     Width = 97
     Height = 41
     Caption = 'DATA SISWA'
@@ -52,7 +52,7 @@ object Form1: TForm1
   end
   object btn2: TButton
     Left = 128
-    Top = 80
+    Top = 56
     Width = 113
     Height = 41
     Caption = 'DATA ORANG TUA'
@@ -61,7 +61,7 @@ object Form1: TForm1
   end
   object btn3: TButton
     Left = 256
-    Top = 80
+    Top = 56
     Width = 113
     Height = 41
     Caption = 'DATA WALI KELAS'
@@ -70,7 +70,7 @@ object Form1: TForm1
   end
   object btn4: TButton
     Left = 160
-    Top = 136
+    Top = 112
     Width = 89
     Height = 41
     Caption = 'DATA KELAS'
@@ -79,7 +79,7 @@ object Form1: TForm1
   end
   object btn5: TButton
     Left = 32
-    Top = 136
+    Top = 112
     Width = 113
     Height = 41
     Caption = 'DATA HUBUNGAN'
@@ -88,7 +88,7 @@ object Form1: TForm1
   end
   object btn6: TButton
     Left = 264
-    Top = 136
+    Top = 112
     Width = 89
     Height = 41
     Caption = 'DATA POIN'
@@ -97,7 +97,7 @@ object Form1: TForm1
   end
   object btn7: TButton
     Left = 16
-    Top = 192
+    Top = 168
     Width = 113
     Height = 41
     Caption = 'DATA SEMESTER'
@@ -106,7 +106,7 @@ object Form1: TForm1
   end
   object btn8: TButton
     Left = 248
-    Top = 192
+    Top = 168
     Width = 121
     Height = 41
     Caption = 'DATA RANGKUMAN'
@@ -115,7 +115,7 @@ object Form1: TForm1
   end
   object btn9: TButton
     Left = 144
-    Top = 192
+    Top = 168
     Width = 89
     Height = 41
     Caption = 'DATA USER'
@@ -124,7 +124,7 @@ object Form1: TForm1
   end
   object btn10: TButton
     Left = 32
-    Top = 288
+    Top = 256
     Width = 97
     Height = 41
     Caption = 'PRESTASI'
@@ -133,7 +133,7 @@ object Form1: TForm1
   end
   object btn11: TButton
     Left = 144
-    Top = 288
+    Top = 256
     Width = 97
     Height = 41
     Caption = 'PELANGGARAN'
@@ -142,16 +142,24 @@ object Form1: TForm1
   end
   object btn12: TButton
     Left = 256
-    Top = 288
+    Top = 256
     Width = 105
     Height = 41
     Caption = 'RANGKUMAN'
     TabOrder = 11
     OnClick = btn12Click
   end
+  object btn13: TButton
+    Left = 304
+    Top = 320
+    Width = 75
+    Height = 41
+    Caption = 'KELUAR'
+    TabOrder = 12
+    OnClick = btn13Click
+  end
   object MainMenu1: TMainMenu
-    Left = 40
-    Top = 16
+    Left = 24
     object Data1: TMenuItem
       Caption = 'DATA SEKOLAH'
       object DataSiswa1: TMenuItem
@@ -213,19 +221,5 @@ object Form1: TForm1
         OnClick = DataUser1Click
       end
     end
-  end
-  object ZConnection1: TZConnection
-    ControlsCodePage = cGET_ACP
-    UTF8StringsAsWideField = False
-    AutoEncodeStrings = False
-    Connected = True
-    HostName = 'localhost'
-    Port = 3306
-    Database = 'dblaporansiswa'
-    User = 'root'
-    Protocol = 'mysql'
-    LibraryLocation = 'D:\Visual 2\DaudAlPathoni_2110010455_TugasAkhir\libmysql.dll'
-    Left = 328
-    Top = 8
   end
 end

@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses MainMenu, DataSemester, DataRangkuman;
+uses MainMenu, DataSemester, DataRangkuman, FormLogin;
 
 {$R *.dfm}
 

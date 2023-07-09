@@ -32,6 +32,7 @@ type
     btn2: TButton;
     btn3: TButton;
     btn4: TButton;
+    Label8: TLabel;
     procedure dbgrd1CellClick(Column: TColumn);
     procedure bersih;
     procedure posisiawal;
@@ -51,7 +52,7 @@ var
 
 implementation
 
-uses MainMenu, DataSemester;
+uses MainMenu, DataSemester, FormLogin;
 
 {$R *.dfm}
 

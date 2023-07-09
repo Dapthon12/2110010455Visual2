@@ -14,12 +14,14 @@ uses
   FormCetakPrestasi in 'FormCetakPrestasi.pas' {Form10},
   FormCetakPelanggaran in 'FormCetakPelanggaran.pas' {Form11},
   FormCetakRangkuman in 'FormCetakRangkuman.pas' {Form12},
-  DataRangkuman in 'DataRangkuman.pas' {Form13};
+  DataRangkuman in 'DataRangkuman.pas' {Form13},
+  FormLogin in 'FormLogin.pas' {Form14};
 
 {$R *.res}
 
 begin
   Application.Initialize;
+  Application.CreateForm(TForm14, Form14);
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TForm2, Form2);

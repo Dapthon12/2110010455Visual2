@@ -1,0 +1,85 @@
+unit FormLogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset;
+
+type
+  TForm14 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    edt1: TEdit;
+    edt2: TEdit;
+    btn1: TButton;
+    btn2: TButton;
+    ZQuery1: TZQuery;
+    DataSource1: TDataSource;
+    procedure bersih;
+    procedure posisiawal;
+    procedure FormShow(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form14: TForm14;
+
+implementation
+
+uses MainMenu;
+
+{$R *.dfm}
+
+{ TForm14 }
+
+procedure TForm14.bersih;
+begin
+edt1.Clear;
+edt2.Clear;
+end;
+
+procedure TForm14.posisiawal;
+begin
+bersih;
+end;
+
+procedure TForm14.FormShow(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm14.btn1Click(Sender: TObject);
+begin
+if (edt1.Text='') or (edt2.Text='') then
+begin
+  ShowMessage('Username dan password harus diisi!');
+  posisiawal;
+end else
+begin
+  ZQuery1.SQL.Clear;
+  ZQuery1.SQL.Add('SELECT * FROM user WHERE username = :username AND password = :password');
+  ZQuery1.ParamByName('username').AsString := edt1.Text;
+  ZQuery1.ParamByName('password').AsString := edt2.Text;
+  ZQuery1.Open;
+  if not ZQuery1.IsEmpty then
+  begin
+    ShowMessage('Login berhasil.');
+    
+    // Menyembunyikan form login
+    Hide;
+    
+    // Menampilkan form main menu
+    Form1.ShowModal;
+  end
+  else
+    ShowMessage('Username atau password salah.');
+end;
+end;
+
+end.

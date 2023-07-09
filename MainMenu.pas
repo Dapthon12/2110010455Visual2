@@ -15,7 +15,6 @@ type
     DataOrangTua1: TMenuItem;
     DataPoin1: TMenuItem;
     Keluar: TMenuItem;
-    ZConnection1: TZConnection;
     DataKelas1: TMenuItem;
     DataHubungan1: TMenuItem;
     DataSemester1: TMenuItem;
@@ -40,6 +39,7 @@ type
     btn10: TButton;
     btn11: TButton;
     btn12: TButton;
+    btn13: TButton;
     procedure DataSiswa1Click(Sender: TObject);
     procedure DataGuru1Click(Sender: TObject);
     procedure KeluarClick(Sender: TObject);
@@ -65,6 +65,7 @@ type
     procedure btn10Click(Sender: TObject);
     procedure btn11Click(Sender: TObject);
     procedure btn12Click(Sender: TObject);
+    procedure btn13Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -205,6 +206,11 @@ end;
 procedure TForm1.btn12Click(Sender: TObject);
 begin
 Form12.ShowModal;
+end;
+
+procedure TForm1.btn13Click(Sender: TObject);
+begin
+Application.Terminate;
 end;
 
 end.
